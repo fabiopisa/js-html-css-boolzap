@@ -21,6 +21,9 @@ body{
 .float-left{
   float: left;
 }
+ul{
+  list-style: none;
+}
 /*  / fine comandi generali */
 /* corpo sito */
 .container{
@@ -57,6 +60,7 @@ body{
 }
 /* / fine sezioni nel dettaglio main */
 /* sezioni nel dettaglio aside */
+/* HEADER */
 .container > aside header{
 padding: 10px;
 display: flex;
@@ -82,23 +86,65 @@ justify-content: space-between;
   color:#B1B1B1 ;
   font-size: 20px;
 }
+/*/ HEADER */
+/* SECTION */
 .container > aside section{
  height: calc(100% - 70px);
 }
 .container > aside > section .notifications {
  height: 80px;
  background-color:#8EDAFC ;
+ display: flex;
+ align-items: center;
+ padding: 15px;
+}
+.container > aside > section .notifications .bell{
+  background-color: #FFFFFF;
+  color:#8EDAFC ;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.container > aside > section .notifications .text-notifications p{
+ font-size: 13px;
+}
+.container > aside > section .notifications .text-notifications a{
+ font-size: 12px;
+ color:#578194 ;
 }
 .container > aside > section .search-chat{
  height: 50px;
  padding: 10px;
 }
-.container > aside > section .search-chat input {
- width: 100%;
- height: 100%;
+.container > aside > section .search-chat .border {
+ 
  border:1px solid  #EAEAEA;
  border-radius: 2px;
- padding: 5px 50px;
+ display: flex;
+}
+.container > aside > section .search-chat button{
+ width: 50px;
+ height: 100%;
+ border:none;
+ padding: 7px ;
+ background-color: #FFFFFF;
+ color: #B6B9BB;
+ cursor: pointer;
+}
+.container > aside > section .search-chat button:hover{
+  color: #8EDAFC;
+}
+.container > aside > section .search-chat button:active{
+  background-color:#8EDAFC ;
+  color: #FFFFFF;
+}
+.container > aside > section .search-chat input {
+ width: calc(100% - 50px);
+ height: 100%;
+ border:none;
+ padding: 7px ;
+ outline: none;
 }
 .container > aside > section .list-contacts{
   height: calc(100% - 130px);
@@ -107,4 +153,22 @@ justify-content: space-between;
   border-right:1px solid  #EAEAEA;
   border-radius: 2px;
  }
+.container > aside > section .list-contacts ul li{
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #EAEAEA;
+}
+.container > aside > section .list-contacts ul li:last-child{
+  border: none;
+}
+.container > aside > section .list-contacts ul li  img{
+  width: 15%;
+  border-radius:50% ;
+  margin-right: 15px;
+}
+.container > aside > section .list-contacts ul li span{
+  margin-top: 2px;
+}
+ /* / SECTION */
 /* / fine sezioni nel dettaglio aside */

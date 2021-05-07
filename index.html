@@ -29,14 +29,38 @@
 
       <section>
         <div class="notifications">
+          <div class="bell">
+            <i class="fas fa-bell-slash"></i>
+          </div>
 
+          <div class="text-notifications">
+            <p>Ricevi notifiche di nuovi messaggi</p>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
         </div>
 
         <div class="search-chat">
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <div class="border">
+            <button>
+              <i class="fas fa-search"></i>
+            </button>
+            <input type="text" placeholder="Cerca o inizia una nuova chat">
+          </div>
+          
         </div>
 
-        <div class="list-contacts"></div>
+        <div class="list-contacts">
+          <ul>
+            <li
+            v-for="((contact, index) in contacts)"
+            >
+              <img 
+              v-for="(img, index) in imgs"
+              :src="(positionImg++ === index) ? img :null" alt="">
+              <span>{{contact.name}}</span>
+            </li>
+          </ul>
+        </div>
       </section>
     </aside>
 
