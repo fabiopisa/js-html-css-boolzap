@@ -52,13 +52,13 @@
         <div class="list-contacts">
           <ul>
             <li
-            v-for="((contact, index) in contacts)"
+            v-for="(contact, index) in contacts"
             >
               <img 
-              v-for="(img, index) in imgs"
-              :src="(positionImg++ === index) ? img :null" alt="">
+              :src="contact.img" alt="">
               <span>{{contact.name}}</span>
             </li>
+            
           </ul>
         </div>
       </section>

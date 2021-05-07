@@ -5,19 +5,13 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visua
 
 const app = new Vue({
   el:'#app',
-  dat:{
-    positionImg:0,
-    imgs:[
-      'assets/img/avatar_1.jpg',
-      'assets/img/avatar_2.jpg',
-      'assets/img/avatar_3.jpg',
-      'assets/img/avatar_4.jpg',
-    ],
+  data:{
     contacts: [
       {
         name: 'Michele',
         avatar: '_1',
         visible: true,
+        img:'assets/img/avatar_1.jpg',
         messages: [
           {
             date: '10/01/2020 15:30:55',
@@ -40,6 +34,7 @@ const app = new Vue({
         name: 'Fabio',
         avatar: '_2',
         visible: true,
+        img:'assets/img/avatar_2.jpg',
         messages: [
           {
             date: '20/03/2020 16:30:00',
@@ -62,6 +57,7 @@ const app = new Vue({
         name: 'Samuele',
         avatar: '_3',
         visible: true,
+        img:'assets/img/avatar_3.jpg',
         messages: [
           {
             date: '28/03/2020 10:10:40',
@@ -84,6 +80,7 @@ const app = new Vue({
         name: 'Luisa',
         avatar: '_4',
         visible: true,
+        img:'assets/img/avatar_4.jpg',
         messages: [
           {
             date: '10/01/2020 15:30:55',
@@ -100,6 +97,8 @@ const app = new Vue({
     ]
   },
   methods:{
-    
+    addImg(){
+      positionImg++ 
+    }
   }
 })
