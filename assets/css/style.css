@@ -55,9 +55,67 @@ ul{
 .container > main footer{
   border-left:1px solid  #D8D8D8 ;
 }
+.container > main header{
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+.container > main header .friend-open-chat{
+display: flex;
+align-items: center;
+}
+.container > main header .friend-open-chat img{
+ width: 10%;
+ border-radius: 50%;
+}
+.container > main header .friend-open-chat .descrition-friend{
+ display: flex;
+ flex-direction: column;
+ margin-left: 15px;
+}
+.container > main header .friend-open-chat .descrition-friend span{
+ font-size: 15px;
+}
+.container > main header .friend-open-chat .descrition-friend span:last-child{
+ font-size: 13px;
+ color: #6A7376;
+}
+.container > main header .icon-chat-friend{
+ font-size: 20px;
+ color: #B1B1B1;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 10%;
+ margin-right: 15px;
+}
 .container > main section{
   height: calc(100% - 140px);
 }
+.container > main footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  font-size: 25px;
+  color:#6A7376 ;
+  background-color:#F4EFEA ;
+}
+.container > main footer input{
+  width: 85%;
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.container > main i:hover{
+  color: #8EDAFC;
+  cursor: pointer;
+}
+.container > main i:active{
+  color:#0F9687;
+}
+
 /* / fine sezioni nel dettaglio main */
 /* sezioni nel dettaglio aside */
 /* HEADER */
