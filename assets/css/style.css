@@ -91,6 +91,52 @@ align-items: center;
 }
 .container > main section{
   height: calc(100% - 140px);
+  padding: 70px;
+}
+.container > main section ul li{
+ min-height: 60px;
+}
+.container > main section ul li.text-right{
+ text-align: right;
+}
+.container > main section ul li.text-left{
+ text-align: left;
+}
+.container > main section ul li .box-mes{
+  padding: 17px 10px;
+  padding-right: 30px;
+  font-size: 13px;
+  min-width: 35%;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.container > main section ul li .box-mes span{
+ font-size: 10px;
+ color: #B1B1B1;
+ position: absolute;
+ bottom: 2px;
+ right: 10px;
+}
+.container > main section ul li .box-mes i{
+ /* font-size: 10px; */
+ color: #000000;
+ position: absolute;
+ top: 15px;
+ right: 10px;
+ visibility: hidden;
+}
+.container > main section ul li .box-mes:hover i{
+ visibility: visible;
+}
+.container > main section ul li .mes-user{
+  background-color:#D6FABB ;
+}
+.container > main section ul li .mes-friend{
+  background-color:#FFFFFF ;
+}
+.container > main section ul li .mes-friend i{
+  color: #B1B1B1;
 }
 .container > main footer{
   display: flex;
