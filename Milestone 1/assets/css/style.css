@@ -24,6 +24,11 @@ body{
 ul{
   list-style: none;
 }
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
 /*  / fine comandi generali */
 /* corpo sito */
 .container{
@@ -94,7 +99,7 @@ align-items: center;
   padding: 70px;
 }
 .container > main section ul li{
- min-height: 60px;
+ margin-bottom: 15px;
 }
 .container > main section ul li.text-right{
  text-align: right;
@@ -104,9 +109,9 @@ align-items: center;
 }
 .container > main section ul li .box-mes{
   padding: 17px 10px;
-  padding-right: 30px;
   font-size: 13px;
-  min-width: 35%;
+  min-width: 40%;
+  max-width: 70%;
   border-radius: 5px;
   position: relative;
   cursor: pointer;
@@ -119,7 +124,6 @@ align-items: center;
  right: 10px;
 }
 .container > main section ul li .box-mes i{
- /* font-size: 10px; */
  color: #000000;
  position: absolute;
  top: 15px;
@@ -131,9 +135,11 @@ align-items: center;
 }
 .container > main section ul li .mes-user{
   background-color:#D6FABB ;
+  float: right;
 }
 .container > main section ul li .mes-friend{
   background-color:#FFFFFF ;
+  float: left;
 }
 .container > main section ul li .mes-friend i{
   color: #B1B1B1;
@@ -256,6 +262,7 @@ justify-content: space-between;
   width: 96%;
   border-right:1px solid  #EAEAEA;
   border-radius: 2px;
+  overflow-y: scroll;
  }
 .container > aside > section .list-contacts ul li{
   padding: 10px;

@@ -16,8 +16,8 @@
     <aside class="float-left">
       <header>
         <div class="profile">
-          <img src="assets/img/avatar_io.jpg" alt="">
-          <span>Nome Utente</span>
+          <img :src="'assets/img/avatar'+ user.avatar +'.jpg'" :alt="user.name">
+          <span>{{user.name}}</span>
         </div> 
 
         <div class="profile-commands">
@@ -55,7 +55,7 @@
             v-for="(contact, index) in contacts"
             >
               <img 
-              :src="contact.img" alt="">
+              :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
               <span>{{contact.name}}</span>
             </li>
             
@@ -83,21 +83,21 @@
 
       <section>
         <ul>
-          <li class="text-right"> 
+          <li class="clearfix"> 
             <span class="box-mes mes-user">
               Hai portato a spasso il cane?
               <span class="time-mes">10/01/2020 15:30:55</span>
               <i class="fas fa-chevron-down"></i>
             </span> 
           </li>
-          <li class="text-right"> 
+          <li class="clearfix"> 
             <span class="box-mes mes-user">
               Ricordati di dargli da mangiare
               <span class="time-mes">10/01/2020 15:50:00</span>
               <i class="fas fa-chevron-down"></i>
             </span> 
           </li>
-          <li class="text-left"> 
+          <li class="clearfix"> 
             <span class="box-mes mes-friend">
               Tutto fatto!
               <span class="time-mes">10/01/2020 16:15:22</span>
