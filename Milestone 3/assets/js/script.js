@@ -120,13 +120,13 @@ const app = new Vue({
         status: 'sent'
       });
       this.strMessage = '';
-      setTimeout((
+      setTimeout(()=>{
         this.contacts[activeUser].messages.push({
           date: '10/01/2020 15:30:55',
           text: 'Ok',
           status: 'received'
-        })
-      ),1000)
+        });
+      },1000)
     }
   }
 })
