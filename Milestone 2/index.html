@@ -60,7 +60,6 @@
               :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
               <span>{{contact.name}}</span>
             </li>
-            
           </ul>
         </div>
       </section>
@@ -70,9 +69,9 @@
       <header>
         <div class="friend-open-chat"
         >
-          <img src="assets/img/avatar_1.jpg" alt="">
+          <img :src="'assets/img/avatar'+ contacts[activeUser].avatar +'.jpg'" alt="">
           <div class="descrition-friend">
-            <span>Michele</span>
+            <span>{{contacts[activeUser].name}}</span>
             <span>Ultimo accesso oggi alle</span>
           </div>
         </div>

@@ -110,7 +110,7 @@ const app = new Vue({
       return this.activeUser = index;
     },
     addClass(index){
-      (this.activeUser === index) ? 'active' : null;
+      return (this.activeUser === index) ? 'active' : null;
     }
   }
 })
