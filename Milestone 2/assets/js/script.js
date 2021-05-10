@@ -109,8 +109,8 @@ const app = new Vue({
     visibleChat(index){
       return this.activeUser = index;
     },
-    addClass(){
-      (this.activeUser === this.contacts.splice()) ? 'active' : null;
+    addClass(index){
+      (this.activeUser === index) ? 'active' : null;
     }
   }
 })

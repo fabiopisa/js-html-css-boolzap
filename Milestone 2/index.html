@@ -54,6 +54,7 @@
             <li
             v-for="(contact, index) in contacts"
             @click="visibleChat(index)"
+            :class="addClass(index)"
             >
               <img 
               :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
@@ -87,8 +88,6 @@
         <ul>
           <li class="clearfix"
           v-for="message in contacts[activeUser].messages"
-          :class="addClass"
-          @click=""
           > 
             <span class="box-mes"
             :class="(message.status === 'sent') ? 'mes-user' : 'mes-friend'"
