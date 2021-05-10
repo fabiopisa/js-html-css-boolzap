@@ -97,6 +97,7 @@ align-items: center;
 .container > main section{
   height: calc(100% - 140px);
   padding: 70px;
+  overflow-y: scroll;
 }
 .container > main section ul li{
  margin-bottom: 15px;
@@ -111,11 +112,12 @@ align-items: center;
   padding: 17px 10px;
   padding-right: 25px;
   font-size: 13px;
-  min-width: 40%;
+  min-width: 30%;
   max-width: 70%;
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+  word-wrap: break-word;
 }
 .container > main section ul li .box-mes span{
  font-size: 10px;

@@ -105,6 +105,7 @@ const app = new Vue({
     ],
     activeUser:0,
     strMessage:'',
+    now:dayjs().format('DD/MM/YYYY HH:mm:ss'),
   },
   methods:{
     visibleChat(index){
@@ -114,19 +115,19 @@ const app = new Vue({
       return (this.activeUser === index) ? 'active' : null;
     },
     newMessage(){
-      this.contacts[activeUser].messages.push({
-        date: '10/01/2020 15:30:55',
+      this.contacts[this.activeUser].messages.push({
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         text: this.strMessage,
         status: 'sent'
       });
       this.strMessage = '';
       setTimeout(()=>{
-        this.contacts[activeUser].messages.push({
-          date: '10/01/2020 15:30:55',
+        this.contacts[this.activeUser].messages.push({
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           text: 'Ok',
           status: 'received'
         });
-      },1000)
-    }
-  }
+      },1000);
+    },
+  },
 })
