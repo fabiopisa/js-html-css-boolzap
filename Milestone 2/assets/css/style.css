@@ -109,6 +109,7 @@ align-items: center;
 }
 .container > main section ul li .box-mes{
   padding: 17px 10px;
+  padding-right: 25px;
   font-size: 13px;
   min-width: 40%;
   max-width: 70%;
@@ -269,6 +270,13 @@ justify-content: space-between;
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid #EAEAEA;
+}
+.container > aside > section .list-contacts ul li:hover{
+  background-color: #F4F6F5;
+  cursor: pointer;
+}
+.container > aside > section .list-contacts ul li.active{
+  background-color: #F4F6F5;
 }
 .container > aside > section .list-contacts ul li:last-child{
   border: none;

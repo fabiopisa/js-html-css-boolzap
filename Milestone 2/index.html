@@ -53,6 +53,7 @@
           <ul>
             <li
             v-for="(contact, index) in contacts"
+            @click="visibleChat(index)"
             >
               <img 
               :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
@@ -66,7 +67,8 @@
 
     <main class="float-left">
       <header>
-        <div class="friend-open-chat">
+        <div class="friend-open-chat"
+        >
           <img src="assets/img/avatar_1.jpg" alt="">
           <div class="descrition-friend">
             <span>Michele</span>
@@ -83,24 +85,16 @@
 
       <section>
         <ul>
-          <li class="clearfix"> 
-            <span class="box-mes mes-user">
-              Hai portato a spasso il cane?
-              <span class="time-mes">10/01/2020 15:30:55</span>
-              <i class="fas fa-chevron-down"></i>
-            </span> 
-          </li>
-          <li class="clearfix"> 
-            <span class="box-mes mes-user">
-              Ricordati di dargli da mangiare
-              <span class="time-mes">10/01/2020 15:50:00</span>
-              <i class="fas fa-chevron-down"></i>
-            </span> 
-          </li>
-          <li class="clearfix"> 
-            <span class="box-mes mes-friend">
-              Tutto fatto!
-              <span class="time-mes">10/01/2020 16:15:22</span>
+          <li class="clearfix"
+          v-for="message in contacts[activeUser].messages"
+          :class="addClass"
+          @click=""
+          > 
+            <span class="box-mes"
+            :class="(message.status === 'sent') ? 'mes-user' : 'mes-friend'"
+            >
+              {{message.text}}
+              <span class="time-mes">{{message.date}}</span>
               <i class="fas fa-chevron-down"></i>
             </span> 
           </li>
