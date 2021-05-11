@@ -45,8 +45,9 @@
               <i class="fas fa-search"></i>
             </button>
             <input type="text" placeholder="Cerca o inizia una nuova chat"
-            @keyup="search"
-            v-model="strSerch"
+            @keyup.enter="search"
+            v-model="strSearch"
+            v-if="contacts.visible = true"
             >
             
           </div>
