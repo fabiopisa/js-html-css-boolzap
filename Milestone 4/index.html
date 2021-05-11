@@ -45,9 +45,8 @@
               <i class="fas fa-search"></i>
             </button>
             <input type="text" placeholder="Cerca o inizia una nuova chat"
-            @keyup.enter="search"
+            @keyup="search"
             v-model="strSearch"
-            v-if="contacts.visible = true"
             >
             
           </div>
@@ -60,6 +59,7 @@
             v-for="(contact, index) in contacts"
             @click="visibleChat(index)"
             :class="addClass(index)"
+            v-if="contact.visible === true"
             >
               <img 
               :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">

@@ -131,12 +131,13 @@ const app = new Vue({
       },1000);
     },
     search(){
-      
       let newContacts = this.contacts.filter((element)=>{
         if(!element.name.toLowerCase().includes(this.strSearch.toLowerCase())){
           return element.visible = false
+        }else{
+          return element.visible = true
         }
-      })
+      });
     },
   },
 })
