@@ -77,7 +77,7 @@
           <img :src="'assets/img/avatar'+ contacts[activeUser].avatar +'.jpg'" alt="">
           <div class="descrition-friend">
             <span>{{contacts[activeUser].name}}</span>
-            <span>Ultimo accesso oggi alle {{now}}</span>
+            <span>Ultimo accesso oggi alle {{lastAcces(activeUser)}}</span>
           </div>
         </div>
 
@@ -108,7 +108,7 @@
         <i class="far fa-smile"></i>
         <input type="text" placeholder="Scrivi un messaggio"
         @keyup.enter="newMessage"
-        v-model="strMessage"
+        v-model.trim="strMessage"
         >
         <i class="fas fa-microphone"></i>
       </footer>
