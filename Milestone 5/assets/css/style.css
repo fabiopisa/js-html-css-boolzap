@@ -1,0 +1,339 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+body{
+  height: 100vh;
+  background-image: linear-gradient(to bottom,
+   #249688 0px,
+   #249688 15vh,
+   #D7DBD7 15vh,
+   #D7DBD7 100vh
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.float-left{
+  float: left;
+}
+ul{
+  list-style: none;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+/*  / fine comandi generali */
+/* corpo sito */
+.container{
+  width: 80%;
+  min-width: 900px;
+  height: 90vh;
+}
+.container > aside,
+.container > main{
+  height: 100%;
+}
+.container > aside{
+  background-color:#FAFAFA ;
+  width: 35%;
+}
+.container > main{
+  background-image: url(../img/mine.jpg);
+  width: 65%;
+}
+/* /fine corpo sito */
+/* sezioni nel dettaglio main */
+.container > main header,
+.container > main footer,
+.container > aside header{
+  height:70px ;
+  background-color:#EAEAEA ;
+}
+.container > main header,
+.container > main footer{
+  border-left:1px solid  #D8D8D8 ;
+}
+.container > main header{
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+.container > main header .friend-open-chat{
+display: flex;
+align-items: center;
+}
+.container > main header .friend-open-chat img{
+ width: 9%;
+ border-radius: 50%;
+}
+.container > main header .friend-open-chat .descrition-friend{
+ display: flex;
+ flex-direction: column;
+ margin-left: 15px;
+}
+.container > main header .friend-open-chat .descrition-friend span{
+ font-size: 15px;
+}
+.container > main header .friend-open-chat .descrition-friend span:last-child{
+ font-size: 13px;
+ color: #6A7376;
+}
+.container > main header .icon-chat-friend{
+ font-size: 20px;
+ color: #B1B1B1;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 10%;
+ margin-right: 15px;
+}
+.container > main section{
+  height: calc(100% - 140px);
+  padding: 70px;
+  overflow-y: scroll;
+}
+.container > main section ul li{
+ margin-bottom: 15px;
+}
+.container > main section ul li.text-right{
+ text-align: right;
+}
+.container > main section ul li.text-left{
+ text-align: left;
+}
+.container > main section ul li .box-mes{
+  padding: 17px 10px;
+  padding-right: 25px;
+  font-size: 13px;
+  min-width: 30%;
+  max-width: 70%;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+.container > main section ul li .box-mes span{
+ font-size: 10px;
+ color: #B1B1B1;
+ position: absolute;
+ bottom: 2px;
+ right: 10px;
+}
+.container > main section ul li .box-mes i{
+ color: #000000;
+ position: absolute;
+ top: 15px;
+ right: 10px;
+ visibility: hidden;
+}
+.container > main section ul li .box-mes:hover i{
+ visibility: visible;
+}
+.container > main section ul li .mes-user{
+  background-color:#D6FABB ;
+  float: right;
+}
+.container > main section ul li .mes-friend{
+  background-color:#FFFFFF ;
+  float: left;
+}
+.container > main section ul li .mes-friend i{
+  color: #B1B1B1;
+}
+.container > main section ul li .box-mes ul{
+  position: absolute;
+  top: 30px;
+  right: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 1px 5px 10px rgba(0,0,0,0.3);
+  border-radius: 7px;
+  padding: 10px;
+  z-index: 50;
+}
+.container > main section ul li .box-mes ul li{
+  margin: 0;
+  line-height: 20px;
+  color: #6A7376;
+}
+.container > main section ul li .box-mes ul li:last-child:hover{
+  color: maroon;
+}
+.container > main section ul li .box-mes ul li:first-child:hover{
+  color: #8EDAFC;
+}
+.container > main section ul li .box-mes ul li:active{
+  text-decoration: underline;
+}
+.container > main footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  font-size: 25px;
+  color:#6A7376 ;
+  background-color:#F4EFEA ;
+}
+.container > main footer input{
+  width: 85%;
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.container > main i:hover{
+  color: #8EDAFC;
+  cursor: pointer;
+}
+.container > main i:active{
+  color:#0F9687;
+}
+
+/* / fine sezioni nel dettaglio main */
+/* sezioni nel dettaglio aside */
+/* HEADER */
+.container > aside header{
+padding: 10px;
+display: flex;
+justify-content: space-between;
+}
+.container > aside header .profile{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container > aside header .profile img{
+  width: 18%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.container > aside header .profile span{
+  font-size: 15px;
+}
+.container > aside header .profile-commands{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:#B1B1B1 ;
+  font-size: 20px;
+}
+/*/ HEADER */
+/* SECTION */
+.container > aside section{
+ height: calc(100% - 70px);
+}
+.container > aside > section .notifications {
+ height: 80px;
+ background-color:#8EDAFC ;
+ display: flex;
+ align-items: center;
+ padding: 15px;
+}
+.container > aside > section .notifications .bell{
+  background-color: #FFFFFF;
+  color:#8EDAFC ;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.container > aside > section .notifications .text-notifications p{
+ font-size: 13px;
+}
+.container > aside > section .notifications .text-notifications a{
+ font-size: 12px;
+ color:#578194 ;
+}
+.container > aside > section .search-chat{
+ height: 50px;
+ padding: 10px;
+}
+.container > aside > section .search-chat .border {
+ 
+ border:1px solid  #EAEAEA;
+ border-radius: 2px;
+ display: flex;
+}
+.container > aside > section .search-chat button{
+ width: 50px;
+ height: 100%;
+ border:none;
+ padding: 7px ;
+ background-color: #FFFFFF;
+ color: #B6B9BB;
+ cursor: pointer;
+}
+.container > aside > section .search-chat button:hover{
+  color: #8EDAFC;
+}
+.container > aside > section .search-chat button:active{
+  background-color:#8EDAFC ;
+  color: #FFFFFF;
+}
+.container > aside > section .search-chat input {
+ width: calc(100% - 50px);
+ height: 100%;
+ border:none;
+ padding: 7px ;
+ outline: none;
+}
+.container > aside > section .list-contacts{
+  height: calc(100% - 130px);
+  background-color:#FFFFFF ;
+  width: 96%;
+  border-right:1px solid  #EAEAEA;
+  border-radius: 2px;
+  overflow-y: scroll;
+ }
+.container > aside > section .list-contacts ul li{
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #EAEAEA;
+  text-align: right;
+}
+.container > aside > section .list-contacts ul li:hover{
+  background-color: #F4F6F5;
+  cursor: pointer;
+}
+.container > aside > section .list-contacts ul li.active{
+  background-color: #F4F6F5;
+}
+.container > aside > section .list-contacts ul li:last-child{
+  border: none;
+}
+.container > aside > section .list-contacts ul li  img{
+  width: 25%;
+  border-radius:50% ;
+  margin-right: 15px;
+}
+.container > aside > section .list-contacts ul li span{
+  margin-top: 2px;
+}
+.container > aside > section .list-contacts ul li span:last-child{
+  color: #6A7376;
+  font-size: 12px;
+}
+.container > aside > section .list-contacts ul li .name-contact{
+  display: flex;
+  width: 65%;
+}
+.container > aside > section .list-contacts ul li .mex-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container > aside > section .list-contacts ul li span.date-access{
+  font-size: 11px;
+  width: 35%;
+}
+ /* / SECTION */
+/* / fine sezioni nel dettaglio aside */
