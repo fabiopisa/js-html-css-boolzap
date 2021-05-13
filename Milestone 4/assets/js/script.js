@@ -136,7 +136,15 @@ const app = new Vue({
     lastAcces(index){
       let time = this.contacts[index].messages;
       return time[time.length-1].date;
-    },
+    },   
+    lastMessage(index){
+      let mex = this.contacts[index].messages;
+      if(mex[mex.length-1].text.length > 20){
+        return mex[mex.length-1].text.slice(0,20) + "...";
+      }else{
+        return mex[mex.length-1].text;
+      }
+    },   
     search(){
       let newContacts = this.contacts.filter((element)=>{
         if(!element.name.toLowerCase().includes(this.strSearch.toLowerCase())){

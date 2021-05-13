@@ -70,7 +70,7 @@ display: flex;
 align-items: center;
 }
 .container > main header .friend-open-chat img{
- width: 10%;
+ width: 9%;
  border-radius: 50%;
 }
 .container > main header .friend-open-chat .descrition-friend{
@@ -271,7 +271,9 @@ justify-content: space-between;
   padding: 10px;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   border-bottom: 1px solid #EAEAEA;
+  text-align: right;
 }
 .container > aside > section .list-contacts ul li:hover{
   background-color: #F4F6F5;
@@ -284,12 +286,29 @@ justify-content: space-between;
   border: none;
 }
 .container > aside > section .list-contacts ul li  img{
-  width: 15%;
+  width: 25%;
   border-radius:50% ;
   margin-right: 15px;
 }
 .container > aside > section .list-contacts ul li span{
   margin-top: 2px;
+}
+.container > aside > section .list-contacts ul li span:last-child{
+  color: #6A7376;
+  font-size: 12px;
+}
+.container > aside > section .list-contacts ul li .name-contact{
+  display: flex;
+  width: 65%;
+}
+.container > aside > section .list-contacts ul li .mex-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container > aside > section .list-contacts ul li span.date-access{
+  font-size: 11px;
+  width: 35%;
 }
  /* / SECTION */
 /* / fine sezioni nel dettaglio aside */

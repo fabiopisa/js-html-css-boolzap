@@ -61,9 +61,17 @@
             :class="addClass(index)"
             v-if="contact.visible === true"
             >
-              <img 
-              :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
-              <span>{{contact.name}}</span>
+              
+              <div class="name-contact">
+                <img 
+                 :src="'assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
+                <div class="mex-contact">
+                  <span>{{contact.name}}</span>
+                  <span>{{lastMessage(index)}}</span>
+                </div>
+              </div>
+              <span class="date-access">{{lastAcces(index)}}</span>
+              
             </li>
           </ul>
         </div>
